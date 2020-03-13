@@ -1,0 +1,2 @@
+export const GREETING_MODAL = 'GREETING_MODAL'
+export const CONFIRM_MODAL = 'CONFIRM_MODAL'

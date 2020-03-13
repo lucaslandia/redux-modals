@@ -6,10 +6,17 @@ import App from './App'
 import './index.css'
 import reducer from './reducers'
 import * as serviceWorker from './serviceWorker'
+import ModalRoot from './components/ModalRoot'
+
+const store = createStore(
+    reducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 
 ReactDOM.render(
-    <Provider store={createStore(reducer)}>
+    <Provider store={store}>
         <App />
+        <ModalRoot />
     </Provider>,
     document.getElementById('root'))
 
